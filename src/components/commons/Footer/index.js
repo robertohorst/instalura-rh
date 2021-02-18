@@ -42,4 +42,5 @@ export default function Footer(props) {
       </p>
     </FooterWrapper>
   );
+// eslint-disable-next-line linebreak-style
 }
