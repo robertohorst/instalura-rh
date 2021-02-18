@@ -1,10 +1,10 @@
-import React from 'react'
-import { Button } from '../src/components/commons/Button'
-import Footer from '../src/components/commons/Footer'
-import Menu from '../src/components/commons/Menu/Index'
-import { Box } from '../src/components/foundation/layout/Box'
-import { Grid } from '../src/components/foundation/layout/Grid'
-import Text from '../src/components/foundation/Text'
+import React from 'react';
+import Button from '../src/components/commons/Button';
+import Footer from '../src/components/commons/Footer';
+import Menu from '../src/components/commons/Menu/Index';
+import Box from '../src/components/foundation/layout/Box';
+import Grid from '../src/components/foundation/layout/Grid';
+import Text from '../src/components/foundation/Text';
 
 export default function Home() {
   return (
@@ -35,40 +35,40 @@ export default function Home() {
             justifyContent="center"
             flexDirection="column"
           >
-          <Text
-          variant="title"
-          tag="h1"
-          color="tertiary.main"
-          textAlign={{
-            xs: 'center',
-            md: 'left',
-          }}
-        >
-          Compartilhe momentos e conecte-se com amigos
-        </Text>
-        <Text
-          variant="paragraph1"
-          tag="p"
-          color="tertiary.light"
-          textAlign={{
-            xs: 'center',
-            md: 'left',
-          }}
-        >
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.
-        </Text>
+            <Text
+              variant="title"
+              tag="h1"
+              color="tertiary.main"
+              textAlign={{
+                xs: 'center',
+                md: 'left',
+              }}
+            >
+              Compartilhe momentos e conecte-se com amigos
+            </Text>
+            <Text
+              variant="paragraph1"
+              tag="p"
+              color="tertiary.light"
+              textAlign={{
+                xs: 'center',
+                md: 'left',
+              }}
+            >
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.
+            </Text>
 
-        <Button
-          variant="primary.main"
-          margin={{
-            xs: 'auto',
-            md: 'initial',
-          }}
-          display="block"
-        >
-          Cadastrar
-        </Button>
+            <Button
+              variant="primary.main"
+              margin={{
+                xs: 'auto',
+                md: 'initial',
+              }}
+              display="block"
+            >
+              Cadastrar
+            </Button>
           </Grid.Col>
           <Grid.Col
             value={{
@@ -76,7 +76,8 @@ export default function Home() {
               md: 6,
             }}
           >
-          <img
+            <img
+              alt="Imagem da capa"
               style={{ display: 'block', margin: 'auto' }}
               src="https://bootcamp-alura-01-git-modulo01.omariosouto.vercel.app/images/phones.png"
             />
@@ -86,5 +87,5 @@ export default function Home() {
 
       <Footer />
     </Box>
-    )
+  );
 }
