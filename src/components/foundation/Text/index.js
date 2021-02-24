@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import styled, { css } from 'styled-components';
-import propToStyle from '../../../theme/utils/propToStyle';
 // import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const paragraph1 = `
@@ -30,7 +29,6 @@ export const TextStyleVariantsMap = {
 const TextBase = styled.span`
   ${({ variant }) => TextStyleVariantsMap[variant]}
   color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};
-  ${propToStyle('textAlign')};
 `;
 
 // const TextBase = styled.span`
@@ -49,7 +47,10 @@ const TextBase = styled.span`
 // `;
 
 export default function Text({
-  tag, variant, children, ...props
+  variant,
+  children,
+  tag,
+  ...props
 }) {
   return (
     <TextBase
