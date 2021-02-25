@@ -18,6 +18,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    'react/jsx-indent-props': [2, 'tab', 'first'],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'linebreak-style': 'off',
   },
