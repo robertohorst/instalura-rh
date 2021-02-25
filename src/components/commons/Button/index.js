@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
-import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+
 import { TextStyleVariantsMap } from '../../foundation/Text';
 import propToStyle from '../../../theme/utils/propToStyle';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const ButtonGhost = css`
   color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
@@ -12,6 +13,8 @@ const ButtonGhost = css`
 const ButtonDefault = css`
   color: ${({ theme, variant }) => get(theme, `colors.${variant}.contrastText`)};
   background-color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
+  ${propToStyle('boxShadow')}
+  ${propToStyle('padding')}
 `;
 
 const Button = styled.button`
@@ -35,8 +38,16 @@ const Button = styled.button`
     `,
   })}
 
-    ${propToStyle('margin')}
-    ${propToStyle('display')}
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .2;
+  }
+  ${({ fullWidth }) => fullWidth && css`
+    width: 100%;
+  `};
+
+  ${propToStyle('margin')}
+  ${propToStyle('display')}
 `;
 
 export default Button;
