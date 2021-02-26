@@ -1,7 +1,7 @@
 import React from 'react';
 import { Lottie } from '@crello/react-lottie';
 import successAnimantion from './animations/success.json';
-import errorAnimation from './animations/error.json'
+import errorAnimation from './animations/error.json';
 import Button from '../../commons/Button';
 import TextField from '../../commons/forms/TextField';
 import Box from '../../foundation/layout/Box';
@@ -14,7 +14,6 @@ const formStates = {
   DONE: 'DONE',
   ERROR: 'ERROR',
 };
-
 
 function FormContent() {
   const [isFormSubmited, setIsFormSubmited] = React.useState(false);
@@ -121,7 +120,8 @@ function FormContent() {
       {isFormSubmited && submissionStatus === formStates.DONE && (
         <Box
           display="flex"
-          justifyContent="center">
+          justifyContent="center"
+        >
           <Lottie
             width="150px"
             height="150px"
