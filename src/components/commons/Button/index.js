@@ -54,7 +54,7 @@ const ButtonWrapper = styled.button`
 `;
 
 // eslint-disable-next-line import/prefer-default-export
-export const Button = ({ href, ...props }) => {
+export const Button = ({ href, children, ...props }) => {
   const isLink = Boolean(href);
   const componentTag = isLink ? Link : 'button';
 
@@ -64,7 +64,9 @@ export const Button = ({ href, ...props }) => {
       as={componentTag}
       href={href}
       {...props}
-    />
+    >
+      {children}
+    </ButtonWrapper>
   );
 };
 
@@ -74,4 +76,5 @@ Button.defaultProps = {
 
 Button.propTypes = {
   href: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
