@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../src/components/commons/Button';
+import { Button } from '../src/components/commons/Button';
 import Footer from '../src/components/commons/Footer';
 import Menu from '../src/components/commons/Menu/Index';
 import Modal from '../src/components/commons/Modal';
@@ -42,7 +42,9 @@ export default function Home() {
         )}
       </Modal>
 
-      <Menu />
+      <Menu
+        onCadastrarClick={() => setModalState(true)}
+      />
       <Grid.Container
         marginTop={{
           xs: '32px',
