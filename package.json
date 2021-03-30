@@ -18,12 +18,8 @@
     "@types/jest": "^26.0.22",
     "eslint-plugin-jest": "^24.3.2",
     "framer-motion": "^3.6.7",
-<<<<<<< HEAD
     "jest": "^26.6.3",
     "lodash": "^4.17.20",
-=======
-    "lodash": "^4.17.21",
->>>>>>> b47b03795818d09f4648ec66541c2f095fe05cf8
     "next": "latest",
     "nookies": "^2.5.2",
     "prop-types": "^15.7.2",
