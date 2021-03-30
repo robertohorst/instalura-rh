@@ -1,8 +1,8 @@
-import redirects from './redirects';
+import redirect from './redirect';
 
 // Test Driven Development
 describe('config/redirects', () => {
   test('renders all current redirects', () => {
-    expect(redirects).toMatchSnapshot(); // Fotografia/Insta/Polaroid
+    expect(redirect).toMatchSnapshot(); // Fotografia/Insta/Polaroid
   });
 });
