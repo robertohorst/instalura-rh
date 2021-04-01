@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# cypress
+/cypress/integration/examples
+
 # production
 /build
 
