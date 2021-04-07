@@ -3,10 +3,10 @@ import { Lottie } from '@crello/react-lottie';
 import successAnimantion from './animations/success.json';
 import errorAnimation from './animations/error.json';
 import { Button } from '../../commons/Button';
-import TextField from '../../commons/forms/TextField';
 import Box from '../../foundation/layout/Box';
 import Grid from '../../foundation/layout/Grid';
 import Text from '../../foundation/Text';
+import TextField from '../../forms/TextField';
 
 const formStates = {
   DEFAULT: 'DEFAULT',
