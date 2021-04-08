@@ -6,6 +6,7 @@ import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import propToStyle from '../../../theme/utils/propToStyle';
 import { Link } from '../../commons/Link';
+import { WebsitePageContext } from '../../wrapper/WebSitePage/context';
 
 export const TextStyleVariantsMap = {
   paragraph1: css`
@@ -43,28 +44,20 @@ const TextBase = styled.span`
   ${propToStyle('marginBottom')}
 `;
 
-// const TextBase = styled.span`
-//   ${(props) => {
-//     const { fontSize, fontWeight, lineHeight } = get(
-//       props.theme.typographyVariants,
-//       props.variant
-//     );
-
-//     return css`
-//       font-size: ${fontSize};
-//       font-weight: ${fontWeight};
-//       line-height: ${lineHeight};
-//     `;
-//   }}
-// `;
-
 export default function Text({
   variant,
   children,
   href,
+  cmsKey,
   tag,
   ...props
 }) {
+  const websitePageContext = React.useContext(WebsitePageContext);
+
+  const componentContent = cmsKey
+    ? websitePageContext.getCMSContent(cmsKey)
+    : children;
+
   if (href) {
     return (
       <TextBase
@@ -74,7 +67,7 @@ export default function Text({
       // eslint-disable-next-line react/jsx-props-no-spreading
         {...props}
       >
-        {children}
+        {componentContent}
       </TextBase>
     );
   }
@@ -85,7 +78,7 @@ export default function Text({
       variant={variant}
       {...props}
     >
-      {children}
+      {componentContent}
     </TextBase>
 
   );
@@ -96,6 +89,7 @@ Text.propTypes = {
   variant: PropTypes.string,
   children: PropTypes.node,
   href: PropTypes.string,
+  cmsKey: PropTypes.string,
 };
 
 Text.defaultProps = {
@@ -103,4 +97,5 @@ Text.defaultProps = {
   variant: 'paragraph1',
   children: null,
   href: '',
+  cmsKey: undefined,
 };
