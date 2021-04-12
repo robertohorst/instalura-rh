@@ -11,7 +11,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:integration:open": "cypress open",
-    "test:integration": "cypress run --headless"
+    "test:integration": "cypress run --headless",
+    "test:integration:build": "start-server-and-test build/start http-get://localhost:3000 test:integration",
+    "build/start": "yarn build && yarn start"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
@@ -22,9 +24,12 @@
     "@types/jest": "^26.0.22",
     "eslint-plugin-jest": "^24.3.2",
     "framer-motion": "^3.6.7",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
     "jest": "^26.6.3",
     "jest-canvas-mock": "^2.3.1",
     "jest-styled-components": "^7.0.3",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.20",
     "next": "latest",
     "nookies": "^2.5.2",
@@ -32,6 +37,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^16.8.0",
+    "start-server-and-test": "^1.12.1",
     "styled-components": "^5.0.0",
     "styled-normalize": "^8.0.7",
     "testing-library": "^0.0.2",

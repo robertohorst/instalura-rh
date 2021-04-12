@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import * as yup from 'yup';
 import { Button } from '../../commons/Button';
 import useForm from '../../../infra/hooks/forms/useForm';
-import loginService from '../../../services/login/loginService';
+import { loginService } from '../../../services/login/loginService';
 import TextField from '../../forms/TextField';
 
 const loginSchema = yup.object().shape({
